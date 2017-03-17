@@ -1,0 +1,10 @@
+view.card_page_title{
+  box-sizing: border-box;
+  font-size: 22px;
+  height: none;
+  padding: 20px 5px 10px;
+  line-height: 26px;
+  color: #353535;
+  background-color: #fff;
+  text-align: center;
+}

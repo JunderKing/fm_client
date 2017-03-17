@@ -1,23 +1,49 @@
-<import src="../include/noproj.wxml"/>
-
-<template is="noproj" wx:if="{{false}}"/>
-
-<view class="container" wx:if="{{true}}">
-    <view class="proj_title">
-        <text>项目标题</text>
+<view class="container">
+    <view class="page_title" wx:if="{{projId}}">
+        <navigator url="/pages/project/projEdit?title=title&content={{title}}">
+            <text>{{title}}</text>
+        </navigator>
     </view>
-    <view class="proj_member">
-        <view class="member_info">
-            <image src="{{src}}"></image>
-            <text>角色</text>
-            <text>昵称</text>
+    <view class="proj_member content_area" wx:if="{{projId}}">
+        <view class="member_info" wx:for="{{members}}" wx:key="uid">
+            <image src="{{item.avatar}}"></image>
+            <text class="nick_name">{{item.nick_name}}</text>
         </view>
     </view>
-    <view class="proj_intro">
-        <text>项目简介</text>
-        <text>使命</text>
-        <text>愿景</text>
-        <text>价值观</text>
+    <view class="proj_info content_area dash_border" wx:if="{{projId}}">
+        <navigator class="intro" url="/pages/project/projEdit?title=intro&content={{intro}}">
+            <text class="text_region">{{intro}}</text>
+        </navigator>
+        <navigator class="vision solid_border" url="/pages/project/projEdit?title=vision&content={{vision}}">
+            <text class="label">愿景和使命：</text>
+            <text class="content">{{vision}}</text>
+        </navigator>
+        <view class="qrcode solid_border" bindtap="getQrcode">
+            <text class="label">项目二维码：</text>
+            <text class="content">二维码</text>
+        </view>
+    </view>
+    <view class="pulse_box content_area dash_border" wx:if="{{projId}}">
+        <navigator url="/pages/pulse/pulseList?isUser=1&projId={{projId}}&pulseId=11" hover-class="navigator-hover">
+            <view class="marker" wx:if="{{marker.week}}"></view>
+            <text>周报</text>
+        </navigator>
+        <navigator url="/pages/pulse/pulseList?isUser=1&projId={{projId}}&pulseId=12" hover-class="navigator-hover">
+            <view class="marker" wx:if="{{marker.month}}"></view>
+            <text>月会</text>
+        </navigator>
+        <navigator url="/pages/pulse/pulseDetail?isUser=1&projId={{projId}}&pulseId=13&pulseNo=1" hover-class="navigator-hover">
+            <view class="marker" wx:if="{{marker.season}}"></view>
+            <text>季结</text>
+        </navigator>
+    </view>
+    <view class="btn_area">
+        <button type="primary" size="default" bindtap="createProj">新建项目</button>
+        <button bindtap="qrScan">扫一扫</button>
+        <picker class="btn_style" mode="selector" range="{{myProjects}}" range-key="title" bindchange="onProjChange">
+            切换项目
+        </picker>
     </view>
 </view>
+
 

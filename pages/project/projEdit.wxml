@@ -1,0 +1,10 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="input_area">
+        <textarea class="border" name="input" maxlength="-1" auto-focus value="{{value}}"></textarea>
+    </view>
+    <view class="btn_area">
+      <button formType="submit" type="primary">提交</button>
+    </view>
+  </form>
+</view>

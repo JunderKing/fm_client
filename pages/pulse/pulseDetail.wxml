@@ -1,0 +1,43 @@
+<view class="container">
+    <view class="page_title">
+        <text>{{title}}{{index}}</text>
+    </view>
+    <view class="content_area">
+        <view class="content_area" wx:if="{{!isUser}}">
+            <text class="content_text">{{content}}</text>
+        </view>
+        <view wx:else >
+            <navigator class="content_area paragraph" wx:if="{{content}}" url="/pages/pulse/pulseEdit?projId={{projId}}&pulseId={{pulseId}}&pulseNo={{pulseNo}}&content={{content}}">
+                <text class="content_text">{{content}}</text>
+            </navigator>
+            <view wx:else class="content_area">
+                <navigator class="nav_btn" url="/pages/pulse/pulseEdit?projId={{projId}}&pulseId={{pulseId}}&pulseNo={{pulseNo}}&content={{content}}">
+                    <text>点击填写{{title}}</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="comment_area">
+        <view class="comment_title">
+            <text>所有评论：</text>
+            <button size="mini" type="primary" bindtap="toComment">评论</button>
+        </view>
+        <view class="comment_box" wx:for="{{comments}}" wx:key="comment_id">
+            <image class="avatar" src="{{item.avatar}}"></image>
+            <view class="content_box">
+                <text class="nick_name">{{item.nick_name}}</text>
+                <text class="content">{{item.content}}</text>
+                <view class="comment_btn_box">
+                    <text class="comment_time">{{item.ctime}}</text>
+                    <navigator class="reply_btn" data-id="{{item.comment_id}}" url="/pages/include/replyInput?commentId={{item.comment_id}}">回复</navigator>
+                </view>
+                <view class="reply_area">
+                    <view class="reply_box" wx:for="{{item.replies}}" wx:key="replier_id">
+                        <text class="nick_name">{{item.nick_name}}：</text>
+                        <text class="content"  data-id="{{item.comment_id}}" bindtap="onReply">{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

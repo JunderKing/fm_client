@@ -1,0 +1,14 @@
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="input_area">
+            <textarea class="border" name="content" auto-focus max-length="-1"></textarea>
+            <radio-group name="status">
+                <radio value="success" checked="false">实验成功</radio>
+                <radio value="failed" checked="true">实验失败</radio>
+            </radio-group>
+        </view>
+        <view class="btn_area">
+            <button type="primary" formType="submit">提交</button>
+        </view>
+    </form>
+</view>

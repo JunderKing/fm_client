@@ -1,0 +1,10 @@
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="input_area">
+            <input class="border" type="text" name="title" placeholder="请输入自由人群组名称"/>
+        </view>
+        <view class="btn_area">
+            <button formType="submit" type="primary">创建群组</button>
+        </view>
+    </form>
+</view>

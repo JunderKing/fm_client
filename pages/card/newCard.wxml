@@ -1,0 +1,14 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input_area">
+        <input class="border" name="title" focus placeholder="请输入实验标题"/>
+    </view>
+    <view class="input_area nopadding">
+        <input class="border" name="assumption" placeholder="请输入实验假设" maxlength="-1"/>
+    </view>
+    <view class="btn_area">
+      <button formType="submit" type="primary">提交</button>
+      <button formType="reset">重置</button>
+    </view>
+  </form>
+</view>

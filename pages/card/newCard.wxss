@@ -1,0 +1,6 @@
+textarea{
+    height: 120px;
+}
+view.nopadding{
+  padding: 1px 5px;
+}

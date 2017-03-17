@@ -1,0 +1,11 @@
+<view class="container">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="input_area">
+            <textarea class="border" name="content" auto-focus value="{{content}}" place-holder="请填写{{title}}内容……" max-length="-1" />
+        </view>
+        <view class="btn_area">
+            <button formType="submit" type="primary">提交</button>
+            <button formType="reset">重置</button>
+        </view>
+    </form>
+</view>

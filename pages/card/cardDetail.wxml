@@ -1,0 +1,56 @@
+<view class="container">
+    <view wx:if="{{!isUser}}">
+        <view class="card_page_title">{{title}}</view>
+        <view wx:if="{{assumption}}" class="content_area">
+            <text class="content_text">实验假设：{{assumption}}</text>
+        </view>
+        <view wx:if="{{result}}" class="content_area">
+            <text class="content_text">实验结果：{{result}}</text>
+        </view>
+    </view>
+    <view wx:else >
+        <view class="card_page_title">
+            <navigator class="card_title" url="/pages/card/cardEdit?cardId={{cardId}}&field=title&content={{title}}">
+                <text>{{title}}</text>
+            </navigator>
+        </view>
+        <view wx:if="{{assumption}}" class="content_area">
+            <navigator class="card_assumption" url="/pages/card/cardEdit?cardId={{cardId}}&field=assumption&content={{assumption}}">
+                <text class="paragraph content_text">实验假设：{{assumption}}</text>
+            </navigator> 
+        </view>
+        <view wx:if="{{result}}" class="content_area">
+            <navigator class="card_result" url="/pages/card/resultInput?cardId={{cardId}}&content={{result}}&radio={{status}}">
+                <text class="paragraph content_text">实验结果：{{result}}</text>
+            </navigator> 
+        </view>
+        <view wx:else class="content_area">
+            <navigator class="nav_btn" url="/pages/card/resultInput?cardId={{cardId}}">
+                <text>点击填写实验结果</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="comment_area">
+        <view class="comment_title">
+            <text>所有评论：</text>
+            <button size="mini" type="primary" bindtap="toComment">评论</button>
+        </view>
+        <view class="comment_box" wx:for="{{comments}}" wx:key="comment_id">
+            <image class="avatar" src="{{item.avatar}}"></image>
+            <view class="content_box">
+                <text class="nick_name">{{item.nick_name}}</text>
+                <text class="content">{{item.content}}</text>
+                <view class="comment_btn_box">
+                    <text class="comment_time">{{item.ctime}}</text>
+                    <navigator class="reply_btn" data-id="{{item.comment_id}}" url="/pages/include/replyInput?commentId={{item.comment_id}}">回复</navigator>
+                </view>
+                <view class="reply_area">
+                    <view class="reply_box" wx:for="{{item.replies}}" wx:key="replier_id">
+                        <text class="nick_name">{{item.nick_name}}：</text>
+                        <text class="content"  data-id="{{item.comment_id}}" bindtap="onReply">{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

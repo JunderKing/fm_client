@@ -1,0 +1,72 @@
+<view class="container">
+    <view class="page_title">
+        <text>{{title}}</text>
+    </view>
+    <view class="proj_member content_area area_gap">
+        <view class="member_info" wx:for="{{members}}" wx:key="uid">
+            <image src="{{item.avatar}}"></image>
+            <text class="nick_name">{{item.nick_name}}</text>
+        </view>
+    </view>
+    <view class="proj_info content_area area_gap">
+        <view class="intro" url="/pages/project/projEdit?title=intro&content={{intro}}">
+            <text class="text">{{intro}}</text>
+        </view>
+        <view class="vision" url="/pages/project/projEdit?title=vision&content={{vision}}">
+            <text class="text">愿景和使命：</text>
+            <text class="content">{{vision}}</text>
+        </view>
+    </view>
+    <view class="pulse_box content_area  area_gap">
+        <navigator url="/pages/pulse/pulseList?isUser=0&projId={{projId}}&pulseId=11" hover-class="navigator-hover">
+            <view class="marker" wx:if="{{marker.week}}"></view>
+            <text>周报</text>
+        </navigator>
+        <navigator url="/pages/pulse/pulseList?isUser=0&projId={{projId}}&pulseId=12" hover-class="navigator-hover">
+            <view class="marker" wx:if="{{marker.month}}"></view>
+            <text>月会</text>
+        </navigator>
+        <navigator url="/pages/pulse/pulseDetail?isUser=0&projId={{projId}}&pulseId=13" hover-class="navigator-hover">
+            <view class="marker" wx:if="{{marker.season}}"></view>
+            <text>季结</text>
+        </navigator>
+    </view>
+    <view class="canvas_box content_area area_gap">
+        <view class="canvas_row">
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=1" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.detail}}"></view>
+                <text>①细分</text>
+            </navigator>
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=2" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.painpoint}}"></view>
+                <text>②痛点</text>
+            </navigator>
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=3" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.value}}"></view>
+                <text>③价值</text>
+            </navigator>
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser0=&canvasId=4" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.scheme}}"></view>
+                <text>④方案</text>
+            </navigator>
+        </view>
+        <view class="canvas_row">
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=5" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.indicator}}"></view>
+                <text>⑤指标</text>
+            </navigator>
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=6" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.income}}"></view>
+                <text>⑥收入</text>
+            </navigator>
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=7" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.channel}}"></view>
+                <text>⑦渠道</text>
+            </navigator>
+            <navigator url="/pages/canvas/canvasDetail?projId={{projId}}&isUser=0&canvasId=8" hover-class="navigator-hover">
+                <view class="marker" wx:if="{{marker.growth}}"></view>
+                <text>⑧增长</text>
+            </navigator> 
+        </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="page_title">
+        <text>历史记录</text>
+    </view>
+    <view class="content_area">
+        <view class="content_area" wx:for="{{canvasLogs}}" wx:key="insert_id">
+            <text class="content paragraph content_text">{{item.content}}</text>
+            <text class="utime paragraph">{{item.submit_time}}</text>
+        </view>
+    </view>
+</view>

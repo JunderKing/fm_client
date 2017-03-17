@@ -1,14 +1,34 @@
 <view class="container">
-  <form bindsubmit="formSubmit" bindreset="formReset">
-    <view class="section section_gap">
-        <input type="text" placeholder="请输入项目名称"/>
-        <textarea placeholder="请输入项目简介"/>
-        <input type="text" placeholder="请输入项目愿景"/>
-        <input type="text" placeholder="请输入使命" />
-        <input type="text" placeholder="请输入项目价值观"/>
-    </view>
-    <view class="btn-area">
-      <button formType="submit" type="primary">Submit</button>
-    </view>
-  </form>
+    <form bindsubmit="formSubmit">
+        <view class="input_area">
+            <input class="border" type="text" name="title" auto-focus placeholder="请输入项目名称"/>
+        </view>
+        <view class="input_area nopadding">
+            <input class="border" type="text" name="vision" placeholder="请输入项目愿景和使命"/>
+        </view>
+        <view class="input_area nopadding">
+            <view class="hint">
+                <text class="stress" >我</text>
+                <text>，在哪个</text>
+                <text class="stress">行业</text>
+                <text>，选择哪个</text>
+                <text class="stress">价值点</text>
+                <text>，借用什么</text>
+                <text class="stress">外力</text>
+                <text>，为</text>
+                <text class="stress">谁</text>
+                <text>，解决什么</text>
+                <text class="stress">问题</text>
+                <text>，提供什么</text>
+                <text class="stress">产品与服务</text>
+                <text>。</text>
+            </view>
+        </view>
+        <view class="input_area nopadding">
+            <input class="border" name="intro" placeholder="请参考上述模板填写项目简介" bindinput="oninput"/>
+        </view>
+        <view class="btn_area">
+            <button formType="submit" type="primary">提交</button>
+        </view>
+    </form>
 </view>

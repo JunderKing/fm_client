@@ -1,34 +1,54 @@
 <view class="container">
     <view class="canvas_row">
-        <view class="canvas_box detail_canvas">
-            <text>细分</text>
+        <view class="canvas_subtitle">
+            <text>对的问题</text>
         </view>
-        <view class="canvas_box painpoiont_canvas">
-            <text>痛点</text>
-        </view>
+        <navigator class="canvas_box detail_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=1&isUser=1">
+            <view class="marker" wx:if="{{marker.detail}}"></view>
+            <text>①细分</text>
+        </navigator>
+        <navigator class="canvas_box painpoiont_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=2&isUser=1">
+            <view class="marker" wx:if="{{marker.painpoint}}"></view>
+            <text>②痛点</text>
+        </navigator>
     </view>
     <view class="canvas_row">
-        <view class="canvas_box detail_canvas">
-            <text>价值</text>
+        <view class="canvas_subtitle">
+            <text>对的产品</text>
         </view>
-        <view class="canvas_box painpoiont_canvas">
-            <text>方案</text>
-        </view>
+        <navigator class="canvas_box detail_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=3&isUser=1">
+            <view class="marker" wx:if="{{marker.value}}"></view>
+            <text>③价值</text>
+        </navigator>
+        <navigator class="canvas_box painpoiont_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=4&isUser=1">
+            <view class="marker" wx:if="{{marker.scheme}}"></view>
+            <text>④方案</text>
+        </navigator>
     </view>
     <view class="canvas_row">
-        <view class="canvas_box detail_canvas">
-            <text>指标</text>
+        <view class="canvas_subtitle">
+            <text>有人付钱</text>
         </view>
-        <view class="canvas_box painpoiont_canvas">
-            <text>收入</text>
-        </view>
+        <navigator class="canvas_box detail_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=5&isUser=1">
+            <view class="marker" wx:if="{{marker.indicator}}"></view>
+            <text>⑤指标</text>
+        </navigator>
+        <navigator class="canvas_box painpoiont_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=6&isUser=1">
+            <view class="marker" wx:if="{{marker.income}}"></view>
+            <text>⑥收入</text>
+        </navigator>
     </view>
     <view class="canvas_row">
-        <view class="canvas_box detail_canvas">
-            <text>渠道</text>
+        <view class="canvas_subtitle">
+            <text>付很多钱</text>
         </view>
-        <view class="canvas_box painpoiont_canvas">
-            <text>成长</text>
-        </view>
+        <navigator class="canvas_box detail_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=7&isUser=1">
+            <view class="marker" wx:if="{{marker.channel}}"></view>
+            <text>⑦渠道</text>
+        </navigator>
+        <navigator class="canvas_box painpoiont_canvas" url="/pages/canvas/canvasDetail?projId={{projId}}&canvasId=8&isUser=1">
+            <view class="marker" wx:if="{{marker.growth}}"></view>
+            <text>⑧增长</text>
+        </navigator>
     </view>
 </view>

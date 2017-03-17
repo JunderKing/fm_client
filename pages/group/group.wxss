@@ -1,0 +1,30 @@
+view.proj_list{
+    padding: 10px 10px 0;
+}
+view.proj_info{
+    padding: 10px 0;
+    border-top: 1px solid #dcdcdc;
+    font-size: 16px;
+    position: relative;
+}
+view.proj_info>image{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
+view.proj_info>text.nick_name{
+    position: absolute;
+    left: 55px;
+    top: 12px;
+    font-size: 18px;
+}
+view.proj_info>text.proj_title{
+    position: absolute;
+    left: 55px;
+    bottom: 12px;
+    font-size: 16px;
+    color: #888;
+}
+
+
+

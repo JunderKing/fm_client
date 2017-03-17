@@ -1,0 +1,47 @@
+view.container{
+    background-color: #f0f0f0;
+}
+view.proj_info>view{
+    padding: 15px 0;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 16px;
+    position: relative;
+}
+text.text{
+    font-size: 16px;
+    padding: 2px 0;
+}
+text.content{
+    position: absolute;
+    right: 5px;
+    color: #888;
+}
+view.pulse_box>navigator{
+    display: inline-block;
+    height: 25vw;
+    width: 25vw;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    line-height: 25vw;
+    position: relative;
+}
+view.canvas_box>view.canvas_row{
+    width: calc(100vw - 20px);
+    height: calc(25vw - 5px);
+}
+view.canvas_row>navigator{
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    line-height: calc(25vw - 5px);
+    position: relative;
+}
+view.member_info>text.nick_name{
+    font-size: 12px;
+}
+

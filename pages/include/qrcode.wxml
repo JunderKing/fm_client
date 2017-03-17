@@ -1,0 +1,3 @@
+<view class="container content_area">
+  <image src="https://www.kingco.tech/freeman/data/{{name}}"></image>
+</view>

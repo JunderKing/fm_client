@@ -1,0 +1,23 @@
+/* pages/project/newproj.wxss */
+textarea{
+    height: 120px;
+}
+view.hint{
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 4px;
+}
+view.hint>text.stress{
+    color: red;
+}
+view.nopadding{
+    padding: 1px 5px;
+}
+input.blank{
+    width: 50px;
+    height: 16px;
+    overflow: visible;
+    font-size: 16px;
+    display: inline;
+    text-align: center;
+}

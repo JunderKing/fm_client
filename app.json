@@ -1,18 +1,38 @@
 {
     "pages": [
-        "pages/pulse/pulse",
-        "pages/canvas/canvas",
-        "pages/find/find",
+        "pages/include/start",
         "pages/project/project",
-        "pages/project/newproj"
+        "pages/project/projEdit",
+        "pages/project/newproj",
+        "pages/pulse/pulseList",
+        "pages/pulse/pulseDetail",
+        "pages/pulse/pulseEdit",
+        "pages/pulse/pulseAdd",
+        "pages/canvas/canvasDetail",
+        "pages/canvas/canvas",
+        "pages/canvas/canvasEdit",
+        "pages/canvas/canvasLog",
+        "pages/card/cardDetail",
+        "pages/card/resultInput",
+        "pages/card/newCard",
+        "pages/card/cardEdit",
+        "pages/list/list",
+        "pages/group/group",
+        "pages/group/newgroup",
+        "pages/group/groupProj",
+        "pages/include/qrcode",
+        "pages/include/noproj",
+        "pages/include/comntInput",
+        "pages/include/replyInput",
+        "pages/include/mentorInvite"
     ],
     "window": {
         "navigationBarBackgroundColor": "#000",
-        "navigationBarTextStyle": "balck",
+        "navigationBarTextStyle": "white",
         "navigationBarTitleText": "校园VC自由人",
         "backgroundColor": "#ffffff",
         "backgroundTextStyle": "dark",
-        "enablePullDownRefresh": "true"
+        "enablePullDownRefresh": "false"
     },
     "tabBar": {
         "color": "#000",
@@ -21,8 +41,8 @@
         "borderStyle": "black",
         "list": [
             {
-                "pagePath": "pages/pulse/pulse",
-                "text": "脉搏",
+                "pagePath": "pages/project/project",
+                "text": "项目",
                 "iconPath": "img/pulse.png",
                 "selectedIconPath": "img/pulse2.png"
             },
@@ -32,20 +52,19 @@
                 "iconPath": "img/canvas.png",
                 "selectedIconPath": "img/canvas2.png"
             },
-
             {
-                "pagePath": "pages/find/find",
-                "text": "发现",
+                "pagePath": "pages/list/list",
+                "text": "实验",
                 "iconPath": "img/find.png",
                 "selectedIconPath": "img/find2.png"
             },
-
             {
-                "pagePath": "pages/project/project",
-                "text": "项目",
+                "pagePath": "pages/group/group",
+                "text": "群组",
                 "iconPath": "img/project.png",
                 "selectedIconPath": "img/project2.png"
             }
+
         ],
         "position": "bottom"
     }

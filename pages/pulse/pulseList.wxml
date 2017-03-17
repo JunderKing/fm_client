@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="page_title">
+        <text>{{title}}列表</text>
+    </view>
+    <view class="list_box content_area">
+        <navigator class="item_box" wx:for="{{pulseArray}}" wx:key="pulse_no" url="/pages/pulse/pulseDetail?isUser={{isUser}}&projId={{projId}}&pulseId={{pulseId}}&pulseNo={{index + 1}}">
+            <view class="marker" wx:if="{{item.marker==0}}"></view>
+            <view class="text_box">
+                <text class="nick_name">{{index + 1}}</text>
+            </view>
+            <text class="content pulse_content">{{item.content}}</text>
+        </navigator>
+    </view>
+    <view class="btn_area" wx:if="{{isUser}}">
+        <button type="primary" size="default" bindtap="addPulse">填写{{title}}</button>
+    </view>
+</view>

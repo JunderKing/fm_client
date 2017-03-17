@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="page_title">
+        <text>{{title}}</text>
+    </view>
+    <view class="prompt_box">
+        <text>只有导师才能创建群组</text>
+    </view>
+    <view class="proj_list content_area">
+        <view class="proj_info" wx:for="{{projects}}" wx:key="proj_id" data-projid="{{item.proj_id}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+            <view class="marker" wx:if="{{item.marker==0}}"></view>
+            <image style="" mode="scaleToFill" src="{{item.avatar}}"></image>
+            <text class="nick_name">{{item.nick_name}}</text>
+            <text class="proj_title">{{item.title}}</text>
+        </view>
+    </view>
+    <view class="btn_area">
+        <button type="primary" size="default" bindtap="createGroup" wx:if="{{role}}">创建群组</button>
+        <button type="default" size="default" bindtap="inviteMentor" wx:if="{{role===2}}">邀请导师</button>
+        <button type="default" size="default" bindtap="getQrcode" wx:if="{{role&&groupId}}">群二维码</button>
+        <picker class="btn_style" mode="selector" range="{{myGroups}}" range-key="title" value="0" bindchange="onGroupChange" wx:if="{{groupId}}">
+            切换群组
+        </picker>
+    </view>
+</view>

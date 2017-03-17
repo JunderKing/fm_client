@@ -1,0 +1,29 @@
+/* pages/project/project.wxss */
+view.proj_info{
+    padding: 0 10px;
+}
+view.proj_info>navigator, view{
+    font-size: 16px;
+    line-height: 18px;
+    position: relative;
+    color: #353535;
+}
+view.proj_info>navigator.intro{
+    padding: 10px 0;
+}
+text.label{
+    line-height: 45px;
+    font-size: 16px;
+    padding: 2px 0;
+}
+text.content{
+    position: absolute;
+    line-height: 45px;
+    right: 5px;
+    color: #888;
+}
+view.member_info>text.nick_name{
+    font-size: 12px;
+}
+
+

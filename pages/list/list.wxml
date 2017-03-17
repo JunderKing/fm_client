@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="page_title">
+        <text>我的实验列表</text>
+    </view>
+    <view class="prompt_box">
+      <text>来自画布格子进行中的实验</text>
+    </view>
+    <view class="test_card_box content_area">
+        <view class="test_card {{item.status}}" wx:for="{{canvasCards}}" wx:key="card_order" data-cardid="{{item.card_id}}" data-canvasid="{{item.canvas_id}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+            <view class="marker" wx:if="{{item.marker==0}}"></view>
+            <view class="card_title">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="card_footer">
+                <text>{{item.start_time}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,25 +1,253 @@
 view.container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
+view.page_title{
+    width: 100%;
+    height: 65px;
+    padding-top: 15px;
+    text-align: center;
+    line-height: 65px;
+    font-size: 20pt;
+    color: #353535;
+    background-color: #fff;
+}
+view.prompt_box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 20px;
+    /*padding-top: 5px;*/
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #888;
+}
+view.content_area{
+    padding: 10px;
+    background-color: #fff;
+}
+view.dash_border{
+    border-top: 1px dashed #dcdcdc;
+}
+.solid_border{
+    border-top: 1px solid #dcdcdc;
+}
+paragraph{
+    font-size: 16px;
+    line-height: 17px;
+    color: #353535;
+}
+view.area_gap{
+    margin-top: 10px;
+}
+view.btn_area{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1px 0;
+}
+view.btn_area>button{
+    margin: 10px;
+}
+picker.btn_style{
+    margin: 10px;
+    width: calc(100% - 20px);
+    color: #000;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    line-height: 2.55;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+navigator.nav_btn{
+   width: calc(100% - 20px); 
+   text-align: center;
+   font-size: 18px;
+   line-height: 50px;
+   border: 1px solid #dcdcdc;
+   color: #888;
+   margin: 0 10px;
+}
+/*表单组件*/
+view.input_area{
+    padding: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #353535;
+    line-height: 17px;
+}
+textarea{
+    width: 100%;
+    box-sizing: border-box;
+    height: 10px;
+}
+input.border, textarea.border{
+    box-sizing: content-box;
+    font-size: 16px;
+    line-height: 17px;
+    width: calc(100% - 22px);
+    padding: 5px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    margin: 5px;
+}
+textarea.border{
+    height: 25vh;
+}
+input.border{
+    padding: 5px;
+}
+radio-group{
+    text-align: center;
+}
+radio{
+    margin: 10px;
+}
+
+/*comment_area*/
+view.comment_area{
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+view.comment_title{
+    font-size: 16px;
+    height: 30px;
+    line-height: 27px;
+    position: relative;
+}
+view.comment_title>button{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align:center;
+    padding: 0;
+    right: 0;
+    top: 0px;
+}
+view.comment_box{
+    min-height: 55px;
+    margin-bottom: 10px;
+    position: relative;
+    border-top: 1px solid #f0f0f0;
+    color: #535353;
+}
+view.comment_box>image{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    margin: 5px;
+}
+view.comment_box>view.content_box{
+    margin: -55px 0 0 55px;
+    font-size: 14px;
+    line-height: 15px;
+}
+view.content_box>text.nick_name{
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+    padding: 2px;
+    color: rgba(96, 99, 152, 1);
+}
+view.comment_btn_box{
+    margin: 3px;
+    font-size: 14px;
+    position: relative;
+    color: rgba(164,164,164,1);
+}
+view.comment_btn_box>navigator.reply_btn{
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    right: 5px;
+    color: rgba(131,147,180,1);
+}
+view.reply_area{
+    margin: 5px 0 0;
+}
+view.reply_box{
+    background-color: rgba(238, 238, 238, 0.5);
+    padding:3px;
+}
+view.reply_box>text.nick_name{
+    color: rgba(96, 99, 152, 1);
+}
+/*avatar box*/
+view.proj_member{
+    padding: 5px;
+    margin-top: -10px;
+    text-align: center;
+}
+view.member_info{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+view.member_info>image{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+/*puls-button-box*/
+view.pulse_box>navigator{
+    display: inline-block;
+    height: 25vw;
+    width: 25vw;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    line-height: 25vw;
+    font-size: 22px;
+    position: relative;
+}
+/*test-card*/
+view.test_card_box{
+}
+navigator.test_card, view.test_card{
+    color: #fff;
+    padding: 10px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 6px;
+}
+navigator.test_card>view.card_title, view.test_card>view.card_title{
+    font-size: 18px;
+    line-height: 40px;
+}
+navigator.test_card>view.card_footer, view.test_card>view.card_footer{
+    font-size: 14px;
+    line-height: 16px;
+    color: #dcdcdc;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+navigator.test_card.active, view.test_card.active{
+    background-color: rgba(14, 175, 255, 1);
+}
+navigator.test_card.failed, view.test_card.failed{
+    background-color: rgba(247, 96, 96, 1);
+}
+navigator.test_card.success, view.test_card.success{
+    background-color: rgba(9, 187, 9, 1);
+}
+
+
+
+
 view.noproj.container{
     padding: 10px;
     background-color: #F0F0F0;
-}
-view.canvas_row{
-    width: 100vw;
-    height: 25vh;
-}
-view.canvas_box{
-    display: inline-block;
-    box-sizing: border-box;
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    border: 1px solid #f0f0f0;
-    font-size: 18pt;
-}
-view.canvas_box>text{
 }
 view.member_info>image{
     width: 50px;
@@ -31,6 +259,8 @@ navigator.noproj_top{
     height: calc(50% - 20px);
     border-radius: 2px;
     background-color: #fff;
+    text-align: center;
+    line-height: calc(50vh - 20px)
 }
 view.noproj_bottom{
     margin-top: 10px;
@@ -38,5 +268,22 @@ view.noproj_bottom{
     width: calc(100% - 20px);
     height: calc(50% - 20px);
     background-color: #fff;
+    text-align: center;
+    line-height: calc(50vh - 20px)
+}
+view.marker{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: red;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+text.content_text{
+    font-size: 16px;
+    line-height: 17px;
+    color: #353535;
 }
 
